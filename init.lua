@@ -1,6 +1,6 @@
 station_cfg = {}
-station_cfg.ssid=""
-station_cfg.pwd=""
+station_cfg.ssid="jesusdemontreal"
+station_cfg.pwd="dom831207"
 station_cfg.auto=true
 station_cfg.save=true
 wifi.sta.config(station_cfg)
@@ -15,7 +15,7 @@ pwm.start(green)
 pwm.start(blue)
 pwm.start(red)
 ws2812.init()
-buffer = ws2812.newBuffer(4,3)
+buffer = ws2812.newBuffer(7,3)
 
 function arbre(r, g, b)
     pwm.setduty(green, g)
@@ -26,11 +26,14 @@ end
 function locomotive(r, g, b)
     buffer:set(1,g,r,b)
     buffer:set(2,g,r,b)
+    buffer:set(3,g,r,b)
+    buffer:set(4,g,r,b)
+    buffer:set(5,g,r,b)        
     ws2812.write(buffer)
 end
 
 function village(n,r, g, b)
-    buffer:set(n+2,g,r,b)
+    buffer:set(n+5,g,r,b)
     ws2812.write(buffer)
 end
 
