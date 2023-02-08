@@ -1,6 +1,6 @@
 station_cfg = {}
-station_cfg.ssid="jesusdemontreal"
-station_cfg.pwd="dom831207"
+station_cfg.ssid="XXXX"
+station_cfg.pwd="XXXX"
 station_cfg.auto=true
 station_cfg.save=true
 wifi.sta.config(station_cfg)
